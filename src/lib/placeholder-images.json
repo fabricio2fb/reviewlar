@@ -1,0 +1,124 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-appliances",
+      "description": "A collection of modern kitchen appliances.",
+      "imageUrl": "https://images.unsplash.com/photo-1626806819282-2c1dc01a5e0c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxraXRjaGVuJTIwYXBwbGlhbmNlc3xlbnwwfHx8fDE3NTk2MjM3MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "kitchen appliances"
+    },
+    {
+      "id": "refrigerator-1",
+      "description": "A modern stainless steel refrigerator.",
+      "imageUrl": "https://images.unsplash.com/photo-1630699376564-5506f3f1e2e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyZWZyaWdlcmF0b3IlMjBraXRjaGVufGVufDB8fHx8MTc1ODgzODM0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "refrigerator kitchen"
+    },
+    {
+      "id": "refrigerator-2",
+      "description": "Interior of a refrigerator with food.",
+      "imageUrl": "https://images.unsplash.com/photo-1588692132717-3d14436c9a35?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyZWZyaWdlcmF0b3IlMjBpbnRlcmlvcnxlbnwwfHx8fDE3NTk4NjcyMzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "refrigerator interior"
+    },
+    {
+      "id": "refrigerator-3",
+      "description": "A side view of a modern refrigerator.",
+      "imageUrl": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyZWZyaWdlcmF0b3J8ZW58MHx8fHwxNzU5ODY3MjM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "refrigerator side"
+    },
+    {
+      "id": "stove-1",
+      "description": "A stainless steel gas stove.",
+      "imageUrl": "https://images.unsplash.com/photo-1723902499494-47b2b8cc32cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxzdG92ZSUyMGtpdGNoZW58ZW58MHx8fHwxNzU4ODM4MzQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "stove kitchen"
+    },
+    {
+      "id": "stove-2",
+      "description": "A black stove with a glass top.",
+      "imageUrl": "https://images.unsplash.com/photo-1619994534898-c34d31e1c0d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxibGFjayUyMHN0b3ZlJTIwZ2xhc3N8ZW58MHx8fHwxNzYwNDc2MjUxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "black stove"
+    },
+    {
+      "id": "stove-3",
+      "description": "A modern 5-burner stove with a glass top.",
+      "imageUrl": "https://images.unsplash.com/photo-1604391698717-38f3a39f6046?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjBzdG92ZXxlbnwwfHx8fDE3NjA0ODY5OTV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern stove"
+    },
+    {
+      "id": "microwave-1",
+      "description": "A countertop microwave oven.",
+      "imageUrl": "https://images.unsplash.com/photo-1690731849383-514935755156?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtaWNyb3dhdmUlMjBvdmVufGVufDB8fHx8MTc1ODczMDIxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "microwave oven"
+    },
+    {
+      "id": "microwave-2",
+      "description": "A mirrored stainless steel microwave oven.",
+      "imageUrl": "https://images.unsplash.com/photo-1604114788100-34d63443a53d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaXJyb3JlZCUyMG1pY3Jvd2F2ZXxlbnwwfHx8fDE3NjA1NTE4NTF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mirrored microwave"
+    },
+    {
+      "id": "washing-machine-1",
+      "description": "A front-loading washing machine.",
+      "imageUrl": "https://images.unsplash.com/photo-1668417863230-64f2b8cc3252?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx3YXNoaW5nJTIwbWFjaGluZXxlbnwwfHx8fDE3NTg4MzI4Mzh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "washing machine"
+    },
+    {
+      "id": "washing-machine-2",
+      "description": "A top-loading washing machine with a digital panel.",
+      "imageUrl": "https://images.unsplash.com/photo-1629117855329-798f51726f59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0b3AlMjBsb2FkJTIwd2FzaGluZyUyMG1hY2hpbmV8ZW58MHx8fHwxNzYwNTYzMzg1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "top-loading washer"
+    },
+    {
+      "id": "air-fryer-1",
+      "description": "A black air fryer on a kitchen counter.",
+      "imageUrl": "https://images.unsplash.com/photo-1645529760103-0d60ea3c2b3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhaXIlMjBmcnllcnxlbnwwfHx8fDE3NTg3NTk5MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "air fryer"
+    },
+    {
+      "id": "coffee-maker-1",
+      "description": "An espresso machine making coffee.",
+      "imageUrl": "https://images.unsplash.com/photo-1528884504895-e749888f6c2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxjb2ZmZWUlMjBtYWNoaW5lfGVufDB8fHx8MTc1ODc5ODQ3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "coffee machine"
+    },
+    {
+      "id": "blender-1",
+      "description": "A blender with fruits inside.",
+      "imageUrl": "https://images.unsplash.com/photo-1654179280447-8dfcf49a54d4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxibGVuZGVyJTIwa2l0Y2hlbnxlbnwwfHx8fDE3NTg3MjY0NDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blender kitchen"
+    },
+    {
+      "id": "blender-2",
+      "description": "A Philips blender on a kitchen counter.",
+      "imageUrl": "https://images.unsplash.com/photo-1619175230493-9c16245e899b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaGlsaXBzJTIwYmxlbmRlcnxlbnwwfHx8fDE3NjA5NDgwNTB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "philips blender"
+    },
+    {
+      "id": "television-1",
+      "description": "A modern smart TV in a living room.",
+      "imageUrl": "https://images.unsplash.com/photo-1593784944533-218a0e059a85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzbWFydCUyMHR2fGVufDB8fHx8MTc1OTg4ODAwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart tv"
+    },
+    {
+      "id": "television-2",
+      "description": "A modern smart TV from LG.",
+      "imageUrl": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wzNzk5MDR8MHwxfHNlYXJjaHwxfHxsZyUyMHR2fGVufDB8fHx8MTc2MTAzNzQ0NHww&ixlib=rb-4.0.3&q=80&w=1080",
+      "imageHint": "lg television"
+    },
+    {
+      "id": "contact-us",
+      "description": "A person writing on a notepad at a desk.",
+      "imageUrl": "https://images.unsplash.com/photo-1589578641895-56f5e660549f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHx3cml0aW5nJTIwZGVza3xlbnwwfHx8fDE3NTg3NjE2NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "writing desk"
+    },
+    {
+      "id": "about-us",
+      "description": "A friendly person smiling.",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NTg3ODg5NzR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "admin-login",
+      "description": "A key on a keyboard.",
+      "imageUrl": "https://images.unsplash.com/photo-1640552429925-c6dd2463f5ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxrZXklMjBrZXlib2FyZHxlbnwwfHx8fDE3NTg4MzgzNDJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "key keyboard"
+    }
+  ]
+}
