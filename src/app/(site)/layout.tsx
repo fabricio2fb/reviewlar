@@ -4,6 +4,7 @@ import '../globals.css';
 import { cn } from '@/lib/utils';
 import SiteFooter from '@/components/site-footer';
 import SiteHeader from '@/components/site-header';
+import CookieConsentBanner from '@/components/cookie-consent-banner';
 import Script from 'next/script'; // 👈 PRECISAMOS IMPORTAR O SCRIPT
 
 export const metadata: Metadata = {
@@ -39,6 +40,7 @@ export default function SiteLayout({
         <div className="flex-1">{children}</div>
         <SiteFooter />
         <Toaster />
+        <CookieConsentBanner />
       </div>
     </>
   );

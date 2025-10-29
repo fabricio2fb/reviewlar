@@ -18,7 +18,7 @@ import { cn } from '@/lib/utils';
 import type { NavItem } from '@/lib/types';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu';
-import { useAuth, AuthProvider } from '@/lib/auth';
+import { useAuth, AuthProvider } from '@/lib/auth.tsx';
 
 function HeaderContent() {
   const pathname = usePathname();
@@ -28,7 +28,7 @@ function HeaderContent() {
   const navItems: NavItem[] = [
     { title: 'Home', href: '/' },
     { title: 'Categorias', href: '/categorias' },
-    { title: 'Comparar', href: '/comparar' },
+    { title: 'Comparador', href: '/comparador' },
   ];
 
   return (
@@ -46,7 +46,7 @@ function HeaderContent() {
                 href={item.href}
                 className={cn(
                   'flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm',
-                  (pathname === item.href || (item.href === '/categorias' && pathname.startsWith('/categoria')))
+                  (pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href)))
                     ? 'text-foreground'
                     : 'text-foreground/60'
                 )}

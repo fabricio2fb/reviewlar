@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Icons } from './icons';
 import { categories } from '@/lib/data';
-import { Instagram, Youtube } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -21,12 +21,14 @@ export default function SiteFooter() {
     { title: 'TikTok', href: '#', icon: <TikTokIcon className="h-5 w-5" /> },
   ];
 
+  const mainCategories = categories.slice(0, 5);
+
   return (
     <footer className="bg-muted text-muted-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Logo e Descrição */}
-          <div className="md:col-span-1">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+          
+          <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Icons.logo className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold font-headline text-foreground">
@@ -38,11 +40,18 @@ export default function SiteFooter() {
             </p>
           </div>
 
-          {/* Categorias */}
+          <div>
+            <h3 className="font-headline font-semibold text-foreground mb-4">Institucional</h3>
+            <ul className="space-y-2">
+              <li><Link href="/sobre" className="text-sm hover:text-primary transition-colors">Sobre Nós</Link></li>
+              <li><Link href="/contato" className="text-sm hover:text-primary transition-colors">Contato</Link></li>
+            </ul>
+          </div>
+
           <div>
             <h3 className="font-headline font-semibold text-foreground mb-4">Categorias</h3>
             <ul className="space-y-2">
-              {categories.map((category) => (
+              {mainCategories.map((category) => (
                 <li key={category.slug}>
                   <Link
                     href={`/categoria/${category.slug}`}
@@ -52,32 +61,40 @@ export default function SiteFooter() {
                   </Link>
                 </li>
               ))}
+               <li><Link href="/categorias" className="text-sm font-bold text-primary hover:underline">Ver todas</Link></li>
             </ul>
           </div>
 
-          {/* Redes Sociais */}
           <div>
-            <h3 className="font-headline font-semibold text-foreground mb-4">Redes Sociais</h3>
-            <ul className="space-y-3">
-              {socialLinks.map((item) => (
-                <li key={item.title}>
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-sm hover:text-primary transition-colors"
-                  >
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </a>
-                </li>
-              ))}
+            <h3 className="font-headline font-semibold text-foreground mb-4">Legal</h3>
+            <ul className="space-y-2">
+                <li><Link href="/politica-de-privacidade" className="text-sm hover:text-primary transition-colors">Política de Privacidade</Link></li>
+                <li><Link href="/termos-de-uso" className="text-sm hover:text-primary transition-colors">Termos de Uso</Link></li>
             </ul>
+          </div>
+
+          <div>
+            <h3 className="font-headline font-semibold text-foreground mb-4">Siga-nos</h3>
+            <div className="flex space-x-4">
+              {socialLinks.map((item) => (
+                <a
+                  key={item.title}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label={item.title}
+                >
+                  {item.icon}
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
         <div className="mt-8 border-t border-border pt-6 text-center text-xs">
           <p>&copy; {new Date().getFullYear()} ReviewLar. Todos os direitos reservados.</p>
+           <p className="mt-1">O ReviewLar participa de programas de afiliados. Isso significa que podemos receber comissões por compras feitas através de nossos links, sem custo adicional para você. Isso nos ajuda a manter o site e a continuar produzindo conteúdo de qualidade.</p>
         </div>
       </div>
     </footer>
