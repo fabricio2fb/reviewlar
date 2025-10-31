@@ -111,6 +111,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'a-static.mlcdn.com.br',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };

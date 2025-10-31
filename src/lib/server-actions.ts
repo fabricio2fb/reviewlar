@@ -1,8 +1,16 @@
+// server-actions.ts
 'use server'
 
-import { supabase } from './supabase-client'
+import { createClient } from '@supabase/supabase-js'
 import { revalidatePath } from 'next/cache'
 import type { Review, Category } from './types'
+
+// 🔐 client com service role (só no servidor)
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY! // precisa dessa key no .env
+)
+
 
 // GET Reviews do banco de dados
 export async function getReviews(): Promise<Review[]> {

@@ -23,17 +23,6 @@ export default function AboutPage() {
                 <p>
                   Bem-vindo ao ReviewLar! Nascemos de uma paixão simples: ajudar consumidores como você a tomar as melhores decisões na hora de equipar a casa. Em um mercado cheio de opções e informações técnicas complexas, nossa missão é ser sua fonte confiável e descomplicada para reviews de eletrodomésticos e produtos para o lar.
                 </p>
-                {aboutImage && (
-                    <div className="relative w-full aspect-video my-8 rounded-lg overflow-hidden">
-                        <Image
-                            src={aboutImage.imageUrl}
-                            alt="Equipe do ReviewLar analisando produtos"
-                            fill
-                            className="object-cover"
-                            data-ai-hint={aboutImage.imageHint}
-                        />
-                    </div>
-                )}
               </section>
 
               <section>
