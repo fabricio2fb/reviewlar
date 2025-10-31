@@ -182,4 +182,10 @@ export const Icons = {
       </text>
     </svg>
   ),
+  thumbsUp: (props: SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M7 10v12"/><path d="M18 10V4c0-1.1-.9-2-2-2v0c-1.1 0-2 .9-2 2v1.5"/><path d="M14 9.5V10h4.5a2.5 2.5 0 0 1 2.5 2.5V17a2.5 2.5 0 0 1-2.5 2.5h-9.5V10M7 10h3.5"/><path d="M18 10a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-2.5"/></svg>
+  ),
+  thumbsDown: (props: SVGProps<SVGSVGElement>) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M17 14V2"/><path d="M6 14v-1.5c0-1.1.9-2 2-2v0c1.1 0 2 .9 2 2V14"/><path d="M10 14.5V14h-4.5a2.5 2.5 0 0 1-2.5-2.5V5a2.5 2.5 0 0 1 2.5-2.5h9.5V14M17 14h-3.5"/><path d="M6 14a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v2.5"/></svg>
+  )
 };
