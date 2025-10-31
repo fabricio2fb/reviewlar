@@ -28,6 +28,7 @@ function HeaderContent() {
   const navItems: NavItem[] = [
     { title: 'Home', href: '/' },
     { title: 'Categorias', href: '/categorias' },
+    { title: 'Reviews', href: '/reviews' },
     { title: 'Comparar', href: '/comparar' },
   ];
 
