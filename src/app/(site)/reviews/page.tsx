@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useCallback } from 'react';
+import { useState, useEffect, useMemo, useCallback, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card } from '@/components/ui/card';
 import ReviewCard from '@/components/review-card';
@@ -146,7 +146,7 @@ function FilterSidebar({
   );
 }
 
-export default function MarketplacePage() {
+function MarketplaceContent() {
   const searchParams = useSearchParams();
   const [reviews, setReviews] = useState<Review[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
@@ -231,8 +231,6 @@ export default function MarketplacePage() {
           </p>
         </header>
 
-
-
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           <aside className="lg:col-span-1">
             <FilterSidebar categories={categories} onFilterChange={handleFilterChange} clearFilters={handleClearFilters} />
@@ -261,5 +259,17 @@ export default function MarketplacePage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function MarketplacePage() {
+  return (
+    <Suspense fallback={
+      <div className="flex justify-center items-center min-h-screen">
+        <Loader2 className="h-12 w-12 animate-spin text-primary" />
+      </div>
+    }>
+      <MarketplaceContent />
+    </Suspense>
   );
 }
