@@ -564,10 +564,22 @@ export function ReviewForm({ initialData }: ReviewFormProps) {
   },
   "offers": [
     {
+      "store": "Magazine Luiza",
+      "price": 2199.90,
+      "offerUrl": "https://amazon.com.br/produto",
+      "storeLogoUrl": "https://i.postimg.cc/rsM4T89r/Magalu-novo-logo.png"
+    }
+    {
       "store": "Amazon",
       "price": 2199.90,
       "offerUrl": "https://amazon.com.br/produto",
-      "storeLogoUrl": "https://exemplo.com/logo-amazon.png"
+      "storeLogoUrl": "https://i.postimg.cc/5yWDPMFK/Design-sem-nome-27.png"
+    }
+    {
+      "store": "Mercado Livre",
+      "price": 2199.90,
+      "offerUrl": "https://amazon.com.br/produto",
+      "storeLogoUrl": "https://i.postimg.cc/NFrfXYvJ/Design-sem-nome-28.png"
     }
   ]
 }`}
