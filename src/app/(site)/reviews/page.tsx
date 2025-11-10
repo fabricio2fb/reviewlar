@@ -17,7 +17,7 @@ import {
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Star, Refrigerator, CookingPot, Microwave, WashingMachine, Flame, Coffee, Blend, Tv } from 'lucide-react';
+import { Star, Refrigerator, CookingPot, Microwave, WashingMachine, Flame, Coffee, Blend, Tv, AlertCircle } from 'lucide-react';
 import { Loader2 } from 'lucide-react';
 
 const categoryIcons: { [key: string]: React.ReactNode } = {
@@ -146,6 +146,51 @@ function FilterSidebar({
   );
 }
 
+// Componente de Divulgação de Afiliados
+function AffiliateDisclosure() {
+  return (
+    <Card className="mt-12 p-6 bg-amber-50 dark:bg-amber-950 border-amber-200 dark:border-amber-800">
+      <div className="flex items-start gap-4">
+        <AlertCircle className="h-6 w-6 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+        <div className="space-y-3">
+          <h3 className="text-lg font-semibold text-amber-900 dark:text-amber-100">
+            📢 Divulgação de Afiliados e Transparência
+          </h3>
+          
+          <div className="text-sm text-amber-800 dark:text-amber-200 space-y-2">
+            <p>
+              <strong>Este site participa de programas de afiliados</strong> da Amazon, Magazine Luiza, Mercado Livre e outras plataformas de comércio eletrônico. Isso significa que, quando você clica em um link de produto e realiza uma compra, podemos receber uma pequena comissão sem nenhum custo adicional para você.
+            </p>
+            
+            <p>
+              Essas comissões nos ajudam a manter o site funcionando, pagar pelos custos de hospedagem e continuar produzindo conteúdo de qualidade e gratuito para nossos leitores.
+            </p>
+            
+            <p>
+              <strong>É importante ressaltar:</strong> Nossa participação em programas de afiliados não influencia nossas avaliações ou recomendações. Todos os reviews são baseados em análises honestas, pesquisas detalhadas e critérios objetivos. Só recomendamos produtos que genuinamente acreditamos serem boas opções para nossos leitores.
+            </p>
+            
+            <p>
+              Além disso, exibimos anúncios do <strong>Google AdSense</strong> em nosso site. O Google e seus parceiros publicitários podem usar cookies para personalizar anúncios com base em suas visitas anteriores a este e outros sites.
+            </p>
+            
+            <p className="pt-2 border-t border-amber-300 dark:border-amber-700">
+              Para mais informações sobre como tratamos seus dados, consulte nossa{' '}
+              <a href="/politica-de-privacidade" className="underline font-semibold hover:text-amber-900 dark:hover:text-amber-50">
+                Política de Privacidade
+              </a>
+              {' '}e nossos{' '}
+              <a href="/termos-de-uso" className="underline font-semibold hover:text-amber-900 dark:hover:text-amber-50">
+                Termos de Uso
+              </a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+}
+
 function MarketplaceContent() {
   const searchParams = useSearchParams();
   const [reviews, setReviews] = useState<Review[]>([]);
@@ -242,18 +287,23 @@ function MarketplaceContent() {
                     <Loader2 className="h-12 w-12 animate-spin text-primary" />
                 </div>
              ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-                {filteredReviews.length > 0 ? (
-                    filteredReviews.map(review => (
-                    <ReviewCard key={review.id} review={review} />
-                    ))
-                ) : (
-                    <div className="sm:col-span-2 xl:col-span-4 text-center py-16">
-                        <p className="text-xl text-muted-foreground">Nenhum resultado encontrado.</p>
-                        <p className="mt-2 text-muted-foreground">Tente ajustar seus filtros.</p>
-                    </div>
-                )}
-                </div>
+                <>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+                    {filteredReviews.length > 0 ? (
+                        filteredReviews.map(review => (
+                        <ReviewCard key={review.id} review={review} />
+                        ))
+                    ) : (
+                        <div className="sm:col-span-2 xl:col-span-4 text-center py-16">
+                            <p className="text-xl text-muted-foreground">Nenhum resultado encontrado.</p>
+                            <p className="mt-2 text-muted-foreground">Tente ajustar seus filtros.</p>
+                        </div>
+                    )}
+                  </div>
+                  
+                  {/* Divulgação de Afiliados */}
+                  <AffiliateDisclosure />
+                </>
              )}
           </div>
         </div>
