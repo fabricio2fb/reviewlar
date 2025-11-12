@@ -106,7 +106,7 @@ export default async function ReviewPage({ params }: ReviewPageProps) {
 
   const otherSpecs = Object.entries(technicalSpecs).filter(([key]) => !['Altura', 'Largura', 'Profundidade', 'Peso'].includes(key));
 
-  const reviewUrl = `https://reviewlar.com/review/${review.slug}`;
+  const reviewUrl = `https://reviewlar.site/review/${review.slug}`;
   
   const lowestPrice = offers && offers.length > 0 
     ? Math.min(...offers.map(o => o.price)) 
