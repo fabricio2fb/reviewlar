@@ -3,10 +3,8 @@
 
 import { MetadataRoute } from 'next'
 
-// Importe a função que você já usa para buscar reviews
-// Você vai precisar criar uma nova função em @/lib/server-actions
-// que retorna TODOS os reviews (não apenas por categoria)
-import { getAllReviews } from '@/lib/server-actions'
+// Usa a função existente que já busca todos os reviews
+import { getReviews, getCategories } from '@/lib/server-actions'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://reviewlar.site'
@@ -22,24 +20,26 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ]
 
   try {
-    // Busca todos os reviews usando sua função
-    const reviews = await getAllReviews()
+    // Busca todos os reviews do Supabase
+    const reviews = await getReviews()
+    
+    console.log('Reviews encontrados:', reviews.length) // Para debug
     
     // Adiciona cada review ao sitemap
     reviews.forEach((review) => {
       routes.push({
         url: `${baseUrl}/review/${review.slug}`,
-        lastModified: review.updatedAt ? new Date(review.updatedAt) : new Date(),
+        lastModified: review.publishedAt ? new Date(review.publishedAt) : new Date(),
         changeFrequency: 'monthly',
         priority: 0.8,
       })
     })
 
-    // Se você tiver páginas de categorias, adicione também
-    const categories = [...new Set(reviews.map(r => r.category))]
+    // Busca e adiciona páginas de categorias
+    const categories = await getCategories()
     categories.forEach((category) => {
       routes.push({
-        url: `${baseUrl}/categoria/${category}`,
+        url: `${baseUrl}/categoria/${category.slug}`,
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.7,
@@ -48,6 +48,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   } catch (error) {
     console.error('Erro ao gerar sitemap:', error)
+    console.error('Detalhes:', error)
   }
 
   return routes
