@@ -90,10 +90,16 @@ export async function POST(request: Request) {
       message: 'Sitemap regenerado com sucesso!'
     })
 
-  } catch (error) {
+  } catch (error: any) {
     console.error('❌ Erro ao regenerar sitemap:', error)
+    console.error('Detalhes do erro:', error.message)
+    console.error('Stack:', error.stack)
     return NextResponse.json(
-      { error: 'Erro ao regenerar sitemap' }, 
+      { 
+        error: 'Erro ao regenerar sitemap',
+        details: error.message,
+        stack: error.stack 
+      }, 
       { status: 500 }
     )
   }
