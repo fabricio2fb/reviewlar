@@ -11,6 +11,18 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY! // precisa dessa key no .env
 )
 
+// 🆕 Função para regenerar o sitemap automaticamente
+async function regenerateSitemap() {
+  try {
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+    await fetch(`${siteUrl}/api/regenerate-sitemap`, {
+      method: 'POST',
+    })
+    console.log('✅ Sitemap regenerado automaticamente')
+  } catch (error) {
+    console.error('❌ Erro ao regenerar sitemap:', error)
+  }
+}
 
 // GET Reviews do banco de dados
 export async function getReviews(): Promise<Review[]> {
@@ -114,7 +126,7 @@ export async function getReviewsByCategory(categorySlug: string): Promise<Review
     cons: review.cons || [],
     images: review.images || [],
     offers: review.offers || [],
-    priceRange: data.price_range,
+    priceRange: review.price_range,
     publishedAt: review.published_at,
   })) as Review[]
 }
@@ -185,6 +197,9 @@ export async function createReview(review: Review): Promise<Review> {
   revalidatePath('/admin/dashboard')
   revalidatePath('/')
   
+  // 🆕 Regenera o sitemap automaticamente
+  await regenerateSitemap()
+  
   return {
     ...data,
     imageAspectRatio: data.image_aspect_ratio || 'square',
@@ -234,6 +249,9 @@ export async function updateReview(review: Review): Promise<Review> {
   revalidatePath(`/review/${review.slug}`)
   revalidatePath(`/admin/reviews/${review.id}/edit`)
   
+  // 🆕 Regenera o sitemap automaticamente
+  await regenerateSitemap()
+  
   return {
     ...data,
     imageAspectRatio: data.image_aspect_ratio || 'square',
@@ -262,6 +280,10 @@ export async function deleteReview(id: string): Promise<{ success: true }> {
 
   revalidatePath('/admin/dashboard')
   revalidatePath('/')
+  
+  // 🆕 Regenera o sitemap automaticamente
+  await regenerateSitemap()
+  
   return { success: true }
 }
 
