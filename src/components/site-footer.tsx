@@ -18,7 +18,7 @@ const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
 export default function SiteFooter() {
   const socialLinks = [
     { title: 'Instagram', href: 'https://www.instagram.com/reviewlar/', icon: <Instagram className="h-5 w-5" /> },
-    { title: 'TikTok', href: '#', icon: <TikTokIcon className="h-5 w-5" /> },
+    { title: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61583728295397', icon: <FacebookIcon className="h-5 w-5" /> },
   ];
 
   const mainCategories = categories.slice(0, 5);
