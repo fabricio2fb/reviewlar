@@ -69,6 +69,29 @@
     --sidebar-border: 217 33% 17%;
     --sidebar-ring: 196 76% 53%;
   }
+
+  /* Tema CINZA PURO escuro APENAS para o dashboard */
+  body.dashboard-dark {
+    --background: 0 0% 10%;        /* Cinza puro escuro - sem matiz */
+    --foreground: 0 0% 92%;        /* Texto cinza claro */
+    --card: 0 0% 14%;              /* Cards cinza médio-escuro */
+    --card-foreground: 0 0% 92%;
+    --popover: 0 0% 14%;
+    --popover-foreground: 0 0% 92%;
+    --primary: 25 45% 55%;         /* Mantém botão primário marrom */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 20%;         /* Cinza puro */
+    --secondary-foreground: 0 0% 92%;
+    --muted: 0 0% 18%;             /* Cinza puro */
+    --muted-foreground: 0 0% 65%;
+    --accent: 0 0% 22%;            /* Cinza puro */
+    --accent-foreground: 0 0% 92%;
+    --destructive: 0 62.8% 60.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 25%;            /* Bordas cinza puro */
+    --input: 0 0% 16%;             /* Input cinza escuro puro */
+    --ring: 0 0% 83.9%;
+  }
 }
 
 @layer base {
@@ -77,5 +100,6 @@
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 }
