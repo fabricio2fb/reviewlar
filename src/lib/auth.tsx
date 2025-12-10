@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { Loader2 } from 'lucide-react';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { createBrowserClient } from '@supabase/ssr';
 
 interface User {
   id: string;
@@ -26,7 +26,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isChecking, setIsChecking] = useState(true);
   const router = useRouter();
   const pathname = usePathname();
-  const supabase = createClientComponentClient();
+  const supabase = createBrowserClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+);
 
   useEffect(() => {
     const initAuth = async () => {
