@@ -1,5 +1,5 @@
 
-export type Review = {
+export interface Review {
   id: string;
   slug: string;
   title: string;
@@ -10,14 +10,22 @@ export type Review = {
   imageAspectRatio?: 'square' | 'video' | 'portrait';
   summary: string;
   content: string;
-  technicalSpecs: Record<string, string>;
-  publishedAt: Date | string;
-  scores?: Record<string, number>;
-  priceRange?: string;
   pros?: string[];
   cons?: string[];
+  technicalSpecs?: Record<string, string>;
+  scores?: Record<string, number>;
+  priceRange?: string;
+  publishedAt: string;
   offers?: Offer[];
-};
+  
+  // 🆕 ADICIONE ESTAS LINHAS:
+  keywords?: string[];
+  metaDescription?: string;
+  faq?: Array<{
+    question: string;
+    answer: string;
+  }>;
+}
 
 export type Category = {
   name: string;

@@ -35,6 +35,9 @@ export async function getReviews(): Promise<Review[]> {
     offers: review.offers || [],
     priceRange: review.price_range,
     publishedAt: review.published_at,
+    keywords: review.keywords || [],
+    metaDescription: review.meta_description || null,
+    faq: review.faq || [],
   })) as Review[]
 }
 
@@ -62,6 +65,9 @@ export async function getReviewById(id: string): Promise<Review | null> {
     offers: data.offers || [],
     priceRange: data.price_range,
     publishedAt: data.published_at,
+    keywords: data.keywords || [],
+    metaDescription: data.meta_description || null,
+    faq: data.faq || [],
   } as Review
 }
 
@@ -89,6 +95,9 @@ export async function getReviewBySlug(slug: string): Promise<Review | null> {
     offers: data.offers || [],
     priceRange: data.price_range,
     publishedAt: data.published_at,
+    keywords: data.keywords || [],
+    metaDescription: data.meta_description || null,
+    faq: data.faq || [],
   } as Review
 }
 
@@ -114,8 +123,11 @@ export async function getReviewsByCategory(categorySlug: string): Promise<Review
     cons: review.cons || [],
     images: review.images || [],
     offers: review.offers || [],
-    priceRange: data.price_range,
+    priceRange: review.price_range,
     publishedAt: review.published_at,
+    keywords: review.keywords || [],
+    metaDescription: review.meta_description || null,
+    faq: review.faq || [],
   })) as Review[]
 }
 
@@ -173,6 +185,10 @@ export async function createReview(review: Review): Promise<Review> {
       price_range: review.priceRange || null,
       offers: review.offers || [],
       published_at: review.publishedAt || new Date().toISOString(),
+      // 🆕 Novos campos SEO
+      keywords: review.keywords || [],
+      meta_description: review.metaDescription || review.summary || null,
+      faq: review.faq || [],
     }])
     .select()
     .single()
@@ -196,6 +212,9 @@ export async function createReview(review: Review): Promise<Review> {
     offers: data.offers || [],
     priceRange: data.price_range,
     publishedAt: data.published_at,
+    keywords: data.keywords || [],
+    metaDescription: data.meta_description || null,
+    faq: data.faq || [],
   } as Review
 }
 
@@ -220,6 +239,10 @@ export async function updateReview(review: Review): Promise<Review> {
       price_range: review.priceRange || null,
       offers: review.offers || [],
       published_at: review.publishedAt,
+      // 🆕 Novos campos SEO
+      keywords: review.keywords || [],
+      meta_description: review.metaDescription || review.summary || null,
+      faq: review.faq || [],
     })
     .eq('id', review.id)
     .select()
@@ -245,6 +268,9 @@ export async function updateReview(review: Review): Promise<Review> {
     offers: data.offers || [],
     priceRange: data.price_range,
     publishedAt: data.published_at,
+    keywords: data.keywords || [],
+    metaDescription: data.meta_description || null,
+    faq: data.faq || [],
   } as Review
 }
 
