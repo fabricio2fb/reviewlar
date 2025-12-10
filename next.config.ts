@@ -4,23 +4,12 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  // REMOVA O ESLINT DAQUI - NÃO É MAIS SUPORTADO NO next.config.ts
   images: {
     remotePatterns: [
       // ========================================
       // 🖼️ ADICIONE NOVOS DOMÍNIOS DE IMAGENS AQUI
       // ========================================
-      // Exemplo de como adicionar:
-      // {
-      //   protocol: 'https',
-      //   hostname: 'exemplo.com',
-      //   port: '',
-      //   pathname: '/**',
-      // },
-      // ========================================
-
       {
         protocol: 'https',
         hostname: 'placehold.co',
@@ -47,25 +36,25 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: '**.vtexassets.com', // Todos os subdomínios vtexassets
+        hostname: '**.vtexassets.com',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: '**.supabase.co', // Para Supabase Storage
+        hostname: '**.supabase.co',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: 'www.amazon.com.br', // ← NOVO
+        hostname: 'www.amazon.com.br',
         port: '',
         pathname: '/**',
       },
       {
         protocol: 'https',
-        hostname: '**.amazon.com.br', // ← Todos os subdomínios Amazon BR
+        hostname: '**.amazon.com.br',
         port: '',
         pathname: '/**',
       },
